@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Generator</h1>
+      <br />
+      <br />
+      <div>
+        <label for="length"> Password Length: </label>
+        <input type="number" id="length" value="10" min="8" max="20" />
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          id="choice_1"
+          name="choice_1"
+          value="uppercase"
+        />
+        <label for="choice_1">Uppercase</label><br />
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          id="choice_2"
+          name="choice_2"
+          value="numbers"
+        />
+        <label for="choice_2">Numbers</label><br />
+      </div>
+      <div>
+        <input type="checkbox" id="choice_3" name="choice_3" value="symbols"/>
+        <label for="choice_3">Symbols</label>
+      </div>
+      <!-- Add a div, and inside add 1 label for uppercase, and a checkbox  -->
+
+      <!-- Add a div, and inside add 1 label for numbers, and a checkbox  -->
+
+      <!-- Add a div, and inside add 1 label for symbols, and a checkbox  -->
+
+      <button id="generate">Generate Password</button>
+      <div>
+        <label for="length"> Password Length: </label>
+        <input type="text" id="password" name="password" readonly />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
