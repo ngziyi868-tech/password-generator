@@ -3,38 +3,36 @@ let lowercase = "abcdefghijklmnopqrstuvwxyz";
 let numbers = "0123456789";
 let symbols = "!@#$%^&*()_+{};~?,./";
 
+function generatePass() {
+  let length = parseInt(document.querySelector("#length").value);
 
-function generatePass(){
+  let useUppercase = document.querySelector("#choice_1").checked;
+  let useNumbers = document.querySelector("#choice_2").checked;
+  let useSymbols = document.querySelector("#choice_3").checked;
 
-    let length = parseInt(document.querySelector("length".value));
+  let Password = "";
+  let charSet = "";
 
-    document.getElementById("length").value ="number";
-    document.querySelector("#choice_1").checked;
-    document.querySelector("#choice_2").checked;
-    document.querySelector("#choice_3").checked;
+  charSet += lowercase;
 
-    let Password = "";
-    let charSet = "";
+  if (useUppercase) {
+    charSet += uppercase;
+  }
 
-    charSet += lowercase;
+  if (useNumbers) {
+    charSet += numbers;
+  }
 
-    if (uppercase){
-        charSet += uppercase;
-    }
+  if (useSymbols) {
+    charSet += symbols;
+  }
 
-    if (numbers){
-        charSet += numbers;
-    }
+  for (let i = 0; i < length; i++) {
+    let randomIndex = Math.floor(Math.random() * charSet.length);
+    Password += charSet[randomIndex];
+  }
 
-    if (symbols){
-        charSet += symbols;
-    }
+  document.querySelector("#password").value = Password;
 
-    for(let i = 0; < length; i++){
-       let randomIndex = Math.floor(Math.random() * charSet.length);
-       Password += charSet[randomIndex];
-    }
-
-    document.querySelector("#password").value = Password;
-
+  document.querySelector
 }
