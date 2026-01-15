@@ -34,5 +34,7 @@ function generatePass() {
 
   document.querySelector("#password").value = Password;
 
-  document.querySelector
+
 }
+
+document.querySelector("#generate").addEventListener("click", generatePass);
